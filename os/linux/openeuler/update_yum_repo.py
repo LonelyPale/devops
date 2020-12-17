@@ -33,7 +33,7 @@ def update_yum_repo():
         print("Unsupported os: %s" % sys_os)
         return False
     
-    if sys_arch != "x86_64" and sys_arch != "arm":
+    if sys_arch != "x86_64" and sys_arch != "aarch64":
         print("Unsupported arch: %s" % sys_arch)
         return False
     
@@ -44,7 +44,7 @@ def update_yum_repo():
     url = ""
     if sys_arch == "x86_64":
         url = "https://repo.huaweicloud.com/repository/conf/openeuler_x86_64.repo"
-    elif sys_arch == "arm":
+    elif sys_arch == "aarch64":
         url = "https://repo.huaweicloud.com/repository/conf/openeuler_aarch64.repo"
     
     # todo: optimization
