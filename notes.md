@@ -16,3 +16,20 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
 
+https://golang.google.cn/dl/
+https://www.jianshu.com/p/33cf4f41cae9
+
+
+federation.json
+{
+  "xpubs": [
+    "937c478106e20dbbc2e22ee418733754dc8a9af6c227eab374ff3f48b574a23273a98400b8bc9dcd36276bf266e0f5a71b0a6420dc35b2ba534e9250013471c1"
+  ],
+  "quorum": 1
+}
+
+
+node_key.txt
+c81af7000109871b49020fa8bdada0e463f8186573b508a8606c46895f710c50a60a9d422684b0db8dfe8e3573bb5b5659acdc0a4a722fca73fccd87bc3e9ec2
+
+
