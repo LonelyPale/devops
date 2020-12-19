@@ -1,7 +1,7 @@
 import sys
 import subprocess
 
-def run(command, exit_code=False, multi_command=False):
+def run(command, exit_code=True, multi_command=False):
     if multi_command and (isinstance(command, tuple) or isinstance(command, list)):
         rets = []
         for c in command:
