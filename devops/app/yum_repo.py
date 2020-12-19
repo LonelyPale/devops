@@ -23,6 +23,8 @@ class YumRepo:
                 url = "https://repo.huaweicloud.com/repository/conf/openeuler_aarch64.repo"
             
             # todo: optimization
-            cmd.run("wget -O /etc/yum.repos.d/openEulerOS.repo %s" % url)
-            cmd.run("yum clean all")
-            cmd.run("yum makecache")
+            cmd.run([
+                "wget -O /etc/yum.repos.d/openEulerOS.repo %s" % url,
+                "yum clean all",
+                "yum makecache",
+            ], multi_command=True)
