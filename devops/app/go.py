@@ -14,6 +14,6 @@ class Go(object):
             sys.exit(1)
 
         version = "1.15.6"
-        file = "go%s.linux-%s.tar.gz" % version,devops.arch
+        file = "go%s.linux-%s.tar.gz" % (version, devops.arch)
         url = "https://golang.google.cn/dl/" + file
         print(url)
