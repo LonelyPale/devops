@@ -10,3 +10,15 @@ for site in sites:
 else:
     print("没有循环数据!")
 print("完成循环!")
+
+#exec(open("/Users/wyb/.bash_profile").read())
+import os, sys
+os.environ['a1'] = 'a'*10
+os.environ.update(os.environ)
+print(os.environ['a1'])
+
+import subprocess
+# subprocess.run(". /tmp/test.sh", executable="/bin/sh")
+#subprocess.run(". /tmp/test.sh")
+
+os.execl('/bin/bash', '/bin/bash', '/tmp/test.sh', '&& echo $$')
