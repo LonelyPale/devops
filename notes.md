@@ -4,6 +4,13 @@ docker run -v $HOME/.bytom:/root/.bytom bytom/bytom:latest bytomd init --chain_i
 docker run -d --net=host --log-opt max-size=50m --name=bytomd -v $HOME/.bytom:/root/.bytom bytom/bytom:latest bytomd node --auth.disable
 curl localhost:9888/net-info
 
+cp $GOPATH/src/github.com/bytom/bytom/cmd/bytomd/bytomd $GOPATH/bin/
+cp $GOPATH/src/github.com/bytom/bytom/cmd/bytomcli/bytomcli $GOPATH/bin/
+ln -s $GOPATH/bin/bytomd /usr/local/bin/bytomd
+ln -s $GOPATH/bin/bytomcli /usr/local/bin/bytomcli
+bytomd init --chain_id solonet 
+bytomd node --auth.disable
+
 # old
 https://mirrors.huaweicloud.com/centos-altarch/7.9.2009/os/aarch64/Packages/firefox-68.10.0-1.el7.centos.aarch64.rpm
 
